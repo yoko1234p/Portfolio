@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <div>PatPat</div>
+        </div>
+        <div>Est 2024</div>
+    </nav>
+    <div class="marker-wrapper">
+        <div class="marker">
+            <div class="grab"></div>
+        </div>
+        <div class="active-slide">1/4</div>
+    </div>
+    <div class="slider">
+        <div class="slider-wrapper">
+            <div class="slide">
+                <img src="images/2020-1.jpg" alt="" srcset="">
+            </div>
+            <div class="slide">
+                <img src="images/2023-1.jpg" alt="" srcset="">
+            </div>
+            <div class="slide">
+                <img src="images/2023-2.jpg" alt="" srcset="">
+            </div>
+            <div class="slide">
+                <img src="images/2023-3.jpg" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <script src="gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+<script>
+    let target=0;
+    let current=0;
+    let ease=0.075;
+    const slider =document.querySelector(".slider");
+    const sliderWrapper=document.querySelector(".slider-wrapper");
+    const markerWrapper=document.querySelector(".marker-wrapper");
+    const activeSlide=document.querySelector(".active-slide");
+
+    let maxScroll=sliderWrapper.offsetWidth-window.innerWidth;
+
+    function lerp(start,end,factor){
+        return start +(end -start)*factor
+    }
+
+    function updateActiveSliderNumber(markerMove,markerMaxMove){
+        const partWidth =markerMaxMove /4;
+        let currentPart = Math.round((markerMove-70)/partWidth)||1;
+        currentPart=Math.min(4,currentPart);
+        activeSlide.textContent=`${currentPart}/4`
+    }
+
+    function update() {
+        current=lerp(current,target,ease);
+
+        gsap.set(".slider-wrapper",{
+            x:-current,
+        });
+        let moveRatio=current/maxScroll;
+        let markerMaxMove=window.innerWidth-markerWrapper.offsetWidth-170;
+        let markerMove= 70+ moveRatio*markerMaxMove;
+
+        gsap.to(".marker-wrapper",{
+            x:markerMove,
+            duration:1.8,
+            ease: "expoScale(0.5,7,none)",
+        });
+        updateActiveSliderNumber(markerMove,markerMaxMove);
+        requestAnimationFrame(update)
+    }
+    window.addEventListener("resize",()=>{
+        maxScroll=sliderWrapper.offsetWidth-window.innerWidth;
+    })
+    window.addEventListener("wheel",(e)=>{
+        target+=e.deltaY;
+        target=Math.max(0,target);
+        target=Math.min(maxScroll,target)
+    })
+    update();
+
+</script>
+</html>
