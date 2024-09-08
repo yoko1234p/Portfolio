@@ -12,7 +12,7 @@ body {
 }
 .wrapper {
   position: relative;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 .whitespace {
@@ -104,6 +104,7 @@ nav #brand {
   display: block;
   line-height: 80px;
   font-weight: bold;
+  margin-left: 10%;
 }
 
 nav #brand a {
@@ -367,6 +368,7 @@ h6 {
 
 .project {
   height: 500px;
+  aspect-ratio: 3/2;
   font-size: 36px;
   cursor: pointer;
 }
@@ -498,11 +500,12 @@ h6 {
   .project {
     width: 90% !important;
     margin: 14px auto;
+    aspect-ratio: 2/3;
   }
   .project2 {
     background: url('https://photos-us.bazaarvoice.com/photo/2/cGhvdG86bGFuY29tZQ/10456e47-c903-5c8b-84ac-efd46279cc0d')
       no-repeat 50% 50%;
-    background-size: 100%;
+    background-size: cover;
   }
 
   .vertical {
