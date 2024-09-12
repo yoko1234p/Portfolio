@@ -10,15 +10,18 @@ body {
   background: #0f0f0f !important;
   color: #fff !important;
 }
+
 .wrapper {
   position: relative;
   width: 100%;
   margin: 0 auto;
 }
+
 .whitespace {
   width: 100%;
   height: 100px;
 }
+
 .whitespace2 {
   width: 100%;
   height: 30px;
@@ -53,13 +56,16 @@ body {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
 }
+
 .br767 {
   display: block;
 }
+
 .view767 {
   display: none;
 }
@@ -68,13 +74,16 @@ body {
   .br767 {
     display: none;
   }
+
   .view767 {
     display: block;
   }
+
   @keyframes typewriter {
     from {
       width: 0;
     }
+
     to {
       width: 100%;
     }
@@ -85,6 +94,7 @@ body {
   from {
     border-right-color: rgba(255, 255, 255, 0.75);
   }
+
   to {
     border-right-color: transparent;
   }
@@ -109,7 +119,7 @@ nav #brand {
 
 nav #brand a {
   color: #fff;
-  transition: all 0.3s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 nav #brand a:hover {
@@ -243,6 +253,7 @@ nav #menu li a:hover {
   nav #menu {
     display: none;
   }
+
   #menu {
     padding-inline-start: 0 !important;
   }
@@ -284,22 +295,27 @@ nav #menu li a:hover {
   color: #fff;
   fill: #ffffff;
   stroke: #ffffff;
-  margin: 0 0.5%;
+  padding: 0 auto;
 }
+
 @keyframes moveLeftRight {
   0% {
     transform: translateX(0);
   }
+
   50% {
     transform: translateX(10px);
   }
+
   100% {
     transform: translateX(0);
   }
 }
+
 .text-highlight {
   color: #fff;
 }
+
 .text-highlight::after {
   content: '';
   display: block;
@@ -315,6 +331,7 @@ nav #menu li a:hover {
   /*text-decoration: underline;*/
   width: 90%;
 }
+
 .text-highlight:hover {
   text-decoration: none;
   color: #fff;
@@ -344,9 +361,11 @@ nav #menu li a:hover {
     transform: translate(0, -20px) rotate(45deg);
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     transform: translate(0, 20px) rotate(45deg);
     opacity: 0;
@@ -375,10 +394,10 @@ h6 {
 
 .project1 {
   /*background: url(https://images.unsplash.com/photo-1540349220179-09d3866f2e74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2600&q=80)*/
-  background: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/1cbf1e148943817.62dec9643946c.jpg) no-repeat 50%
-    50%;
+  background: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/1cbf1e148943817.62dec9643946c.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
+
 .project-content {
   position: absolute;
   font-family: 'Roboto Mono';
@@ -393,7 +412,7 @@ h6 {
 }
 
 .project-content-1 {
-  top: 0%;
+  top: -30%;
   color: #fff;
   /*transform: translateX(-50%);*/
   text-align: center;
@@ -418,8 +437,9 @@ h6 {
   background: url('https://ukraine-express.com/files/img/shopdirscreenshot68.jpg') no-repeat 50% 50%;
   background-size: cover;
 }
+
 .project-content-2 {
-  bottom: -45%;
+  bottom: -65%;
   color: #fff;
   text-align: center;
 }
@@ -440,12 +460,12 @@ h6 {
 .project3 {
   /*background: url(https://images.unsplash.com/photo-1482501157762-56897a411e05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)*/
   /*  no-repeat 50% 50%;*/
-  background: url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/2bea95199401721.Y3JvcCwxNTM0LDEyMDAsMzQsMA.jpg)
-    no-repeat 50% 50%;
+  background: url(https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/2bea95199401721.Y3JvcCwxNTM0LDEyMDAsMzQsMA.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
+
 .project-content-3 {
-  top: -60%;
+  top: -120%;
   color: #fff;
   text-align: center;
 }
@@ -467,8 +487,9 @@ h6 {
   background: url(https://mir-s3-cdn-cf.behance.net/projects/808/11bd18148734341.62deb4607d068.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
+
 .project-content-4 {
-  top: 250%;
+  top: 300%;
   color: #fff;
   text-align: center;
 }
@@ -502,9 +523,9 @@ h6 {
     margin: 14px auto;
     aspect-ratio: 2/3;
   }
+
   .project2 {
-    background: url('https://photos-us.bazaarvoice.com/photo/2/cGhvdG86bGFuY29tZQ/10456e47-c903-5c8b-84ac-efd46279cc0d')
-      no-repeat 50% 50%;
+    background: url('https://photos-us.bazaarvoice.com/photo/2/cGhvdG86bGFuY29tZQ/10456e47-c903-5c8b-84ac-efd46279cc0d') no-repeat 50% 50%;
     background-size: cover;
   }
 
@@ -609,6 +630,7 @@ h6 {
 }
 
 @media (max-width: 768px) {
+
   .collab,
   #personal,
   #media,
@@ -654,8 +676,7 @@ h6 {
 }
 
 .image {
-  background: url(https://images.unsplash.com/photo-1540885762261-a2ca01f290f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2468&q=80)
-    no-repeat 50% 70%;
+  background: url(https://images.unsplash.com/photo-1540885762261-a2ca01f290f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2468&q=80) no-repeat 50% 70%;
 }
 
 /*--------------- contact form --------------- */
